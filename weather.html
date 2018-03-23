@@ -48,7 +48,7 @@
 </div>
 <script>
 var request = new XMLHttpRequest();
-request.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=Osornos=metric&appid=6b90e3dd0163e50a9c776e970643c71a', true);
+request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?id=2988507&units=metric&appid=6b90e3dd0163e50a9c776e970643c71a', true);
 request.onload = function () {
   var data = JSON.parse(this.response);
   var lat = data.coord.lat;
@@ -67,7 +67,8 @@ request.onload = function () {
     console.log(atardecer)
 
     if(humedad > 20){
-        document.body.style.backgroundImage = "url(https://icon-icons.com/icons2/527/PNG/512/Humidity_icon-icons.com_52507.png)";
+        document.body.style.backgroundImage = "url(https://icon-icons.com/icons2/527/PNG/512/Humidity_icon-icons.com_52507.png)"
+        document.body.style.backgroundRepeat ="space";
  }
     
     if(temperatura > 18){
